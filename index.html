@@ -19,37 +19,46 @@
   </head>
   <body>
     <h1>Nicollas Gomes</h1>
-    <div id="calculator">
-      <input type="text" disabled id="display" value="0"/>
-      <div id="box-buttons">
-        <button id="clear" onclick="clearAll()">C</button>
-        <button id="delete" class="operator" onclick="deleteLast()">
-          <i class="fa-solid fa-delete-left"></i>
-        </button>
-        <button class="operator" onclick="insertToDisplay('/')">
-          <i class="fa-solid fa-divide"></i>
-        </button>
-        <button class="operator" onclick="insertToDisplay('*')">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <button onclick="insertToDisplay('7')">7</button>
-        <button onclick="insertToDisplay('8')">8</button>
-        <button onclick="insertToDisplay('9')">9</button>
-        <button class="operator" onclick="insertToDisplay('-')">
-          <i class="fa-solid fa-minus"></i>
-        </button>
-        <button onclick="insertToDisplay('4')">4</button>
-        <button onclick="insertToDisplay('5')">5</button>
-        <button onclick="insertToDisplay('6')">6</button>
-        <button class="operator" onclick="insertToDisplay('+')">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <button onclick="insertToDisplay('1')">1</button>
-        <button onclick="insertToDisplay('2')">2</button>
-        <button onclick="insertToDisplay('3')">3</button>
-        <button id="zero" onclick="insertToDisplay('0')">0</button>
-        <button onclick="insertToDisplay('.')">.</button>
-        <button id="equal" onclick="calculateResult()"><i class="fa-solid fa-equals"></i></button>
+    <div id="container">
+      <div id="calculator">
+        <input type="text" disabled id="display" value="0" />
+        <div id="box-buttons">
+          <button id="clear" onclick="clearAll()">C</button>
+          <button id="delete" class="operator" onclick="deleteLast()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <button class="operator" onclick="insertToDisplay('/')">
+            <i class="fa-solid fa-divide"></i>
+          </button>
+          <button class="operator" onclick="insertToDisplay('*')">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button onclick="insertToDisplay('7')">7</button>
+          <button onclick="insertToDisplay('8')">8</button>
+          <button onclick="insertToDisplay('9')">9</button>
+          <button class="operator" onclick="insertToDisplay('-')">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button onclick="insertToDisplay('4')">4</button>
+          <button onclick="insertToDisplay('5')">5</button>
+          <button onclick="insertToDisplay('6')">6</button>
+          <button class="operator" onclick="insertToDisplay('+')">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button onclick="insertToDisplay('1')">1</button>
+          <button onclick="insertToDisplay('2')">2</button>
+          <button onclick="insertToDisplay('3')">3</button>
+          <button id="zero" onclick="insertToDisplay('0')">0</button>
+          <button onclick="insertToDisplay('.')">.</button>
+          <button id="equal" onclick="calculateResult()">
+            <i class="fa-solid fa-equals"></i>
+          </button>
+        </div>
+      </div>
+      <div id="history">
+        <h2>Histórico</h2>
+        <div id="history-list">
+        </div>
       </div>
     </div>
   </body>

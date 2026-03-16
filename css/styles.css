@@ -11,7 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 5rem 0;
   flex-direction: column;
   background-color: #0f172a;
   color: #fff;
@@ -19,13 +20,13 @@ body {
 }
 
 #calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: #1e293b;
   width: 300px;
   border-radius: 10px;
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 #display {
@@ -40,11 +41,39 @@ body {
   color: #e2e8f0;
 }
 
+#container {
+  display: flex;
+  gap: 2rem;
+}
+
+#history {
+  background-color: #e2e8f0;
+  color: #020617;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 6px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+#history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
 #box-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 0.5rem;
+}
+
+p {
+  font-size: 18px;
 }
 
 button {
@@ -78,4 +107,11 @@ button {
   grid-row: 4 / 6;
   height: 100%;
   grid-column: 4;
+}
+
+
+@media (max-width: 700px) {
+  #container {
+    flex-direction: column;
+  }
 }

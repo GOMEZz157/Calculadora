@@ -1,8 +1,16 @@
 // Seleção de elementos
 const display = document.querySelector("#display");
+const historyList = document.querySelector("#history-list");
+let justCalculated = false;
 
 // Funções
 const insertToDisplay = (data) => {
+  if (justCalculated) {
+    display.value = data;
+    justCalculated = false;
+    return;
+  }
+
   if (display.value === "0") {
     display.value = data;
   } else {
@@ -24,9 +32,22 @@ const deleteLast = () => {
 
 const calculateResult = () => {
   try {
-    display.value = eval(display.value);
+    const expression = display.value;
+    const result = eval(expression);
+
+    const p = document.createElement("p");
+    p.innerText = `${expression} = ${result}`;
+    historyList.appendChild(p);
+
+    display.value = result;
+
+    justCalculated = true;
   } catch (err) {
     display.value = "Error";
+
+    setTimeout(() => {
+      display.value = "0";
+    }, 1000);
   }
 };
 
