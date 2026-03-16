@@ -3,11 +3,15 @@ const display = document.querySelector("#display");
 
 // Funções
 const insertToDisplay = (data) => {
-  display.value += data;
+  if (display.value === "0") {
+    display.value = data;
+  } else {
+    display.value += data;
+  }
 };
 
 const clearAll = () => {
-  display.value = "";
+  display.value = "0";
 };
 
 const deleteLast = () => {
@@ -16,8 +20,8 @@ const deleteLast = () => {
 
 const calculateResult = () => {
   try {
-    display.value = eval(display.value)
+    display.value = eval(display.value);
   } catch (err) {
-    display.value("Error")
+    display.value = "Error";
   }
 };
