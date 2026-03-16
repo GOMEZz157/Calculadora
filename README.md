@@ -21,7 +21,7 @@ Acesse o projeto online:
 - ⌫ Apagar último número
 - 📱 Interface simples e responsiva
 
-Calculadoras web geralmente implementam essas operações básicas para treinar lógica de programação e manipulação do DOM com JavaScript. :contentReference[oaicite:0]{index=0}
+Calculadoras web geralmente implementam essas operações básicas para treinar lógica de programação e manipulação do DOM com JavaScript.
 
 ## 🛠️ Tecnologias utilizadas
 
