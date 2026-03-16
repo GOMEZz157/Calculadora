@@ -5,6 +5,12 @@ let justCalculated = false;
 
 // Funções
 const insertToDisplay = (data) => {
+  const operators = ["+", "-", "*", "/"];
+
+  if (operators.includes(data) && operators.includes(display.value.slice(-1))) {
+    return;
+  }
+  
   if (justCalculated) {
     display.value = data;
     justCalculated = false;
@@ -20,6 +26,7 @@ const insertToDisplay = (data) => {
 
 const clearAll = () => {
   display.value = "0";
+  justCalculated = false;
 };
 
 const deleteLast = () => {
