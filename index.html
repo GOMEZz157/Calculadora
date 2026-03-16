@@ -1,13 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Link Script JS -->
     <script src="js/scripts.js" defer></script>
-</head>
-<body>
-    <h1>Calculadora</h1>
-</body>
+    <!-- CDN FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>Nicollas Gomes</h1>
+    <div id="calculator">
+      <input type="text" disabled id="display" />
+      <div id="box-buttons">
+        <button id="clear">C</button>
+        <button id="delete"><i class="fa-solid fa-delete-left"></i></button>
+        <button id="divide"><i class="fa-solid fa-divide"></i></button>
+        <button id="multiply"><i class="fa-solid fa-xmark"></i></button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button id="minus"><i class="fa-solid fa-minus"></i></button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button id="plus"><i class="fa-solid fa-plus"></i></button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
+        <button>.</button>
+        <button id="equal"><i class="fa-solid fa-equals"></i></button>
+      </div>
+    </div>
+  </body>
 </html>
