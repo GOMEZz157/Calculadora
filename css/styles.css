@@ -65,6 +65,22 @@ body {
   flex: 1;
 }
 
+#history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+
+  button {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
 #box-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -108,7 +124,6 @@ button {
   height: 100%;
   grid-column: 4;
 }
-
 
 @media (max-width: 700px) {
   #container {

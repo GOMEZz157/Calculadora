@@ -51,6 +51,10 @@ const calculateResult = () => {
   }
 };
 
+const clearHistory = () => {
+  historyList.innerHTML = "";
+};
+
 document.addEventListener("keydown", (e) => {
   const key = e.key;
 
