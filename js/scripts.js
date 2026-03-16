@@ -16,6 +16,10 @@ const clearAll = () => {
 
 const deleteLast = () => {
   display.value = display.value.slice(0, -1);
+
+  if (display.value === "") {
+    display.value = "0";
+  }
 };
 
 const calculateResult = () => {
@@ -25,3 +29,23 @@ const calculateResult = () => {
     display.value = "Error";
   }
 };
+
+document.addEventListener("keydown", (e) => {
+  const key = e.key;
+
+  if (!isNaN(key) || ["+", "-", "*", "/", "."].includes(key)) {
+    insertToDisplay(key);
+  }
+
+  if (key === "Enter") {
+    calculateResult();
+  }
+
+  if (key === "Backspace") {
+    deleteLast();
+  }
+
+  if (key === "Escape") {
+    clearAll();
+  }
+});
